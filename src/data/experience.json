@@ -1,0 +1,23 @@
+{
+  "professional": {
+    "title": "Virtual Intern, Microsoft Elevate × AICTE Emerging Technologies Program",
+    "timeline": "Feb 2026 – Mar 2026",
+    "description": "Completed a rigorous 4-week internship encompassing 5 industry-focused tracks: Power BI for Business Applications, Microsoft Azure, AI & Machine Learning, Microsoft Copilot, and Cloud Administration & Engineering."
+  },
+  "community": [
+    {
+      "name": "Prompt Wars Virtual Hackathon",
+      "description": "Competed in advanced intent-driven development and AI challenges.",
+      "icon": "code",
+      "projectLink": {
+        "text": "Built the Election Process Education Assistant",
+        "url": "#projects"
+      }
+    },
+    {
+      "name": "Build with AI (Hack2skill)",
+      "description": "Collaborated with my teammate to rapidly architect, test, and deploy functional AI agents using Google Antigravity.",
+      "icon": "terminal"
+    }
+  ]
+}

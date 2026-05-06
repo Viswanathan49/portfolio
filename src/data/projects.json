@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "id": "ai-agents",
+      "name": "AI Agents & Full-Stack",
+      "projects": [
+        {
+          "title": "Election Process Education Assistant",
+          "link": "https://github.com/Viswanathan49/election-process-education-assistant",
+          "githubUrl": "https://github.com/Viswanathan49/election-process-education-assistant",
+          "liveDemoUrl": "",
+          "tech": ["React", "Google Cloud Run"],
+          "description": "An educational assistant built to guide users through the election process."
+        },
+        {
+          "title": "Bakery Intel Agent",
+          "link": "https://github.com/Viswanathan49/bakery-intel-agent",
+          "githubUrl": "https://github.com/Viswanathan49/bakery-intel-agent",
+          "liveDemoUrl": "",
+          "tech": ["AI logic", "Agentic framework"],
+          "description": "An intelligent agent for analyzing bakery operations and providing actionable insights."
+        },
+        {
+          "title": "Zoo Guide Agent",
+          "link": "https://github.com/Viswanathan49/zoo-guide-agent",
+          "githubUrl": "https://github.com/Viswanathan49/zoo-guide-agent",
+          "liveDemoUrl": "",
+          "tech": ["AI logic", "Interactive Assistant"],
+          "description": "A virtual guide agent offering interactive tours and information for zoo visitors."
+        },
+        {
+          "title": "Text Summarization Agent",
+          "link": "https://github.com/Viswanathan49/text-summarization-agent",
+          "githubUrl": "https://github.com/Viswanathan49/text-summarization-agent",
+          "liveDemoUrl": "",
+          "tech": ["LLM integration", "NLP"],
+          "description": "An NLP-powered agent utilizing LLMs to accurately summarize large text documents."
+        }
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "name": "Data Analytics & Power BI",
+      "projects": [
+        {
+          "title": "HR Analytics Dashboard v2",
+          "link": "https://github.com/Viswanathan49/HR-Analytics-Dashboard-v2-Power-BI-",
+          "githubUrl": "https://github.com/Viswanathan49/HR-Analytics-Dashboard-v2-Power-BI-",
+          "liveDemoUrl": "",
+          "tech": ["DAX", "Data Modeling", "Power BI"],
+          "description": "A comprehensive Power BI dashboard analyzing HR metrics and workforce dynamics."
+        },
+        {
+          "title": "India Crude Oil Intelligence Dashboard",
+          "link": "https://github.com/Viswanathan49/india-crude-oil-intelligence-dashboard",
+          "githubUrl": "https://github.com/Viswanathan49/india-crude-oil-intelligence-dashboard",
+          "liveDemoUrl": "",
+          "tech": ["Data visualization", "Insights"],
+          "description": "Intelligence dashboard visualizing critical data trends in the India crude oil sector."
+        }
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine Learning",
+      "projects": [
+        {
+          "title": "Customer Churn Prediction",
+          "link": "https://github.com/Viswanathan49/Customer-churn-prediction",
+          "githubUrl": "https://github.com/Viswanathan49/Customer-churn-prediction",
+          "liveDemoUrl": "",
+          "tech": ["Pandas", "Python", "Predictive Modeling"],
+          "description": "Machine learning model predicting customer churn probability based on historical data."
+        }
+      ]
+    }
+  ]
+}
