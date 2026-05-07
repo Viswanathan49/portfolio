@@ -61,19 +61,32 @@ export default function ContactSection() {
       setIsTyping(true);
       
       try {
-        const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || 'https://api.web3forms.com/submit';
+        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
         
-        // Mock network delay to simulate processing & API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        /* 
-        // Actual fetch request to endpoint
-        await fetch(endpoint, {
+        if (!accessKey) {
+          throw new Error("Access key missing");
+        }
+
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(finalData)
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: 'New Transmission from Portfolio AI Agent',
+            from_name: finalData.name,
+            email: finalData.email,
+            message: finalData.message
+          })
         });
-        */
+
+        const result = await response.json();
+        
+        if (!result.success) {
+          throw new Error(result.message || "Transmission failed");
+        }
         
         setIsTyping(false);
         setMessages(prev => [...prev, { sender: 'agent', text: 'Transmission secured. Logging data and routing to Viswanathan.' }]);
