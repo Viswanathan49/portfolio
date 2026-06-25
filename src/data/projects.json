@@ -5,6 +5,14 @@
       "name": "AI Agents & Full-Stack",
       "projects": [
         {
+          "title": "Carbon Awareness Platform",
+          "link": "https://github.com/Viswanathan49/carbon-awareness-platform",
+          "githubUrl": "https://github.com/Viswanathan49/carbon-awareness-platform",
+          "liveDemoUrl": "https://carbon-awareness-platform-172837462274.europe-west1.run.app/",
+          "tech": ["Antigravity", "Prompt Engineering", "Cloud Run"],
+          "description": "Created for Prompt Wars Virtual using Antigravity and advanced prompting. Ranked #245 out of 34,777 participants (Top 0.5%)."
+        },
+        {
           "title": "Election Process Education Assistant",
           "link": "https://github.com/Viswanathan49/election-process-education-assistant",
           "githubUrl": "https://github.com/Viswanathan49/election-process-education-assistant",
