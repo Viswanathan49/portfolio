@@ -63,8 +63,8 @@ export default function ContactSection() {
       try {
         const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
         
-        if (!accessKey) {
-          throw new Error("Access key missing");
+        if (!accessKey || accessKey === 'your_access_key_here') {
+          throw new Error("Access key missing or invalid. Please replace 'your_access_key_here' in your .env file (for local testing) or GitHub Actions secrets (for production) with your real Web3Forms key.");
         }
 
         const response = await fetch('https://api.web3forms.com/submit', {
@@ -85,14 +85,14 @@ export default function ContactSection() {
         const result = await response.json();
         
         if (!result.success) {
-          throw new Error(result.message || "Transmission failed");
+          throw new Error(`Web3Forms Error: ${result.message || "Transmission failed"}`);
         }
         
         setIsTyping(false);
         setMessages(prev => [...prev, { sender: 'agent', text: 'Transmission secured. Logging data and routing to Viswanathan.' }]);
       } catch (error) {
         setIsTyping(false);
-        setMessages(prev => [...prev, { sender: 'agent', text: 'Error: Connection lost. Transmission failed.' }]);
+        setMessages(prev => [...prev, { sender: 'agent', text: `Error: ${error.message}` }]);
       }
     }
   };
