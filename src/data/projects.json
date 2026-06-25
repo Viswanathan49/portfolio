@@ -16,7 +16,7 @@
           "title": "Election Process Education Assistant",
           "link": "https://github.com/Viswanathan49/election-process-education-assistant",
           "githubUrl": "https://github.com/Viswanathan49/election-process-education-assistant",
-          "liveDemoUrl": "",
+          "liveDemoUrl": "https://election-assistant-45536207543.asia-south1.run.app/",
           "tech": ["React", "Google Cloud Run"],
           "description": "An educational assistant built to guide users through the election process."
         },
@@ -40,7 +40,7 @@
           "title": "Text Summarization Agent",
           "link": "https://github.com/Viswanathan49/text-summarization-agent",
           "githubUrl": "https://github.com/Viswanathan49/text-summarization-agent",
-          "liveDemoUrl": "",
+          "liveDemoUrl": "https://text-summarizer-784066446437.us-central1.run.app",
           "tech": ["LLM integration", "NLP"],
           "description": "An NLP-powered agent utilizing LLMs to accurately summarize large text documents."
         }
@@ -76,7 +76,7 @@
           "title": "Customer Churn Prediction",
           "link": "https://github.com/Viswanathan49/Customer-churn-prediction",
           "githubUrl": "https://github.com/Viswanathan49/Customer-churn-prediction",
-          "liveDemoUrl": "",
+          "liveDemoUrl": "https://vishwa-customer-churn-prediction.netlify.app",
           "tech": ["Pandas", "Python", "Predictive Modeling"],
           "description": "Machine learning model predicting customer churn probability based on historical data."
         }
