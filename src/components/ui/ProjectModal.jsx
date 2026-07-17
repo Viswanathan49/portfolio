@@ -26,11 +26,15 @@ const IconExternal = () => (
 export default function ProjectModal({ project, onClose }) {
   // Prevent background scrolling when modal is open
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    if (project) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, []);
+  }, [project]);
 
   if (!project) return null;
 
