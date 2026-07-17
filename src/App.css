@@ -6,7 +6,8 @@
 
 .header-wrapper {
   width: 100%;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-color);
   position: relative;
   z-index: 10;
 }
@@ -37,6 +38,28 @@
   font-family: var(--font-mono);
   font-size: 0.9rem;
   text-transform: uppercase;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle:hover {
+  color: var(--bg-color);
+  background: var(--neon-blue);
+  border-color: var(--neon-blue);
+  box-shadow: var(--shadow-neon-blue);
 }
 
 .main-content {

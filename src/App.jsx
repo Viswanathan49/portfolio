@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Tabs from './components/ui/Tabs';
 import ExperienceSection from './components/ui/ExperienceSection';
@@ -28,14 +28,27 @@ const IconMail = () => (
 );
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <div className="app-wrapper">
       <header className="header-wrapper">
         <div className="header container">
           <div className="logo">Viswanathan S</div>
-          <nav className="nav-links">
+          <nav className="nav-links" style={{ alignItems: 'center' }}>
             <a href="https://github.com/Viswanathan49" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/viswanathan-sivakumar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+              {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+            </button>
           </nav>
         </div>
       </header>
