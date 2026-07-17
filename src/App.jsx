@@ -20,12 +20,7 @@ const IconLinkedIn = () => (
   </svg>
 );
 
-const IconMail = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-    <polyline points="22,6 12,13 2,6"></polyline>
-  </svg>
-);
+
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -121,7 +116,6 @@ function App() {
           <div className="footer-links">
             <a href="https://github.com/Viswanathan49" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><IconGitHub /></a>
             <a href="https://www.linkedin.com/in/viswanathan-sivakumar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><IconLinkedIn /></a>
-            <a href="#contact" aria-label="Contact via AI Agent"><IconMail /></a>
           </div>
         </div>
         <div className="system-status">
