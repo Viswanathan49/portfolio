@@ -3,8 +3,8 @@
 }
 
 .chat-window {
-  background-color: #050505;
-  border: 1px solid #333;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
   max-width: 700px;
@@ -16,11 +16,11 @@
 }
 
 .chat-header {
-  background-color: #1a1a1a;
+  background-color: var(--bg-card);
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .chat-title {
@@ -46,7 +46,7 @@
   width: 6px;
 }
 .chat-body::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--border-color);
   border-radius: 3px;
 }
 
@@ -82,15 +82,15 @@
 .chat-message.user .msg-bubble {
   background: rgba(188, 19, 254, 0.1);
   border: 1px solid rgba(188, 19, 254, 0.3);
-  color: #fff;
+  color: var(--text-main);
   border-bottom-right-radius: 0;
 }
 
 .chat-input-area {
   display: flex;
   padding: 1rem;
-  background-color: #12121A;
-  border-top: 1px solid #333;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-color);
 }
 
 .chat-input {
@@ -129,8 +129,8 @@
 }
 
 .chat-send-btn:disabled {
-  border-color: #333;
-  color: #555;
+  border-color: var(--border-color);
+  color: var(--text-muted);
   cursor: not-allowed;
 }
 
