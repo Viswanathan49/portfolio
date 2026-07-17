@@ -5,44 +5,64 @@
       "name": "AI Agents & Full-Stack",
       "projects": [
         {
-          "title": "Carbon Awareness Platform",
-          "link": "https://github.com/Viswanathan49/carbon-awareness-platform",
-          "githubUrl": "https://github.com/Viswanathan49/carbon-awareness-platform",
-          "liveDemoUrl": "https://carbon-awareness-platform-172837462274.europe-west1.run.app/",
-          "tech": ["Antigravity", "Prompt Engineering", "Cloud Run"],
-          "description": "Created for Prompt Wars Virtual using Antigravity and advanced prompting. Ranked #245 out of 34,777 participants (Top 0.5%)."
+          "title": "LAMCAP – Offline Multi-Agent CLI Automation",
+          "tagline": "Privacy-first, multi-agent CLI automation framework with local LLM inference, persistent context and conference-paper results.",
+          "problem": "Most AI automation relies on cloud APIs and lacks persistent context, which is a problem for privacy-sensitive environments. LAMCAP explores how far we can push fully local, multi-agent automation with strong safety controls.",
+          "built": [
+            "Multi-agent CLI automation framework (team of 4) with Planner, Executor and Validator agents coordinated via Python asyncio.",
+            "Persistent SQLite context store aggregating command history, filesystem state, environment variables and a task knowledge graph.",
+            "Local LLM inference via Ollama using qwen2.5-coder-7b (4-bit GGUF quantization), plus a JSON-based safety engine (BLOCK/WARN/PASS) and recency-plus-relevance context retrieval algorithm.",
+            "Achieved 87% single-command accuracy, 79% multi-step workflow success and 91% context retention at ~2.3s average latency, co-authored as a conference paper."
+          ],
+          "outcome": "Shows I can design and evaluate real multi-agent systems with measurable performance, strong privacy and safety.",
+          "tech": ["Python", "asyncio", "SQLite", "Ollama", "LLMs", "Multi-Agent Orchestration"],
+          "githubUrl": "",
+          "liveDemoUrl": ""
         },
         {
-          "title": "Election Process Education Assistant",
-          "link": "https://github.com/Viswanathan49/election-process-education-assistant",
-          "githubUrl": "https://github.com/Viswanathan49/election-process-education-assistant",
-          "liveDemoUrl": "https://election-assistant-45536207543.asia-south1.run.app/",
-          "tech": ["React", "Google Cloud Run"],
-          "description": "An educational assistant built to guide users through the election process."
-        },
-        {
-          "title": "Bakery Intel Agent",
-          "link": "https://github.com/Viswanathan49/bakery-intel-agent",
-          "githubUrl": "https://github.com/Viswanathan49/bakery-intel-agent",
-          "liveDemoUrl": "",
-          "tech": ["AI logic", "Agentic framework"],
-          "description": "An intelligent agent for analyzing bakery operations and providing actionable insights."
-        },
-        {
-          "title": "Zoo Guide Agent",
-          "link": "https://github.com/Viswanathan49/zoo-guide-agent",
+          "title": "Zoo Guide Agent – RAG Conversational AI",
+          "tagline": "RAG-powered \"Zoo Tour Guide\" agent using Google ADK, Gemini 2.5 Flash and live Wikipedia lookups.",
+          "problem": "Visitors want rich, accurate explanations about animals and exhibits, but static signage cannot adapt to their questions. This project explores conversational, RAG-based guidance for a zoo context.",
+          "built": [
+            "Conversational AI agent built during Google's Gen AI Academy (Hack2Skill APAC) using Google ADK and Gemini 2.5 Flash.",
+            "Live, real-time Wikipedia lookups via LangChain's tools to ground responses in current, factual information.",
+            "Multi-agent pipeline: Researcher Agent for querying and extracting facts, Formatter Agent for rewriting them into visitor-friendly explanations, orchestrated with transfer_to_agent.",
+            "Containerized with Docker and deployed on Google Cloud Run, supporting multi-turn context, session management and token streaming."
+          ],
+          "outcome": "Demonstrates practical RAG design, multi-agent orchestration and cloud deployment with a concrete, easy-to-understand use case.",
+          "tech": ["Google ADK", "Gemini", "LangChain", "Docker", "Google Cloud Run", "RAG"],
           "githubUrl": "https://github.com/Viswanathan49/zoo-guide-agent",
-          "liveDemoUrl": "",
-          "tech": ["AI logic", "Interactive Assistant"],
-          "description": "A virtual guide agent offering interactive tours and information for zoo visitors."
+          "liveDemoUrl": ""
         },
         {
-          "title": "Text Summarization Agent",
-          "link": "https://github.com/Viswanathan49/text-summarization-agent",
+          "title": "Text Summarization Agent – Configurable LLM API",
+          "tagline": "Gemini-powered summarization agent with three output styles and tool-calling architecture.",
+          "problem": "Different users need different summary styles (short bullets vs detailed reports); generic \"summarize\" endpoints are too rigid. This project builds a flexible, production-style summarization service.",
+          "built": [
+            "AI agent using Google ADK Gemini API with three configurable styles: concise, bullet, and detailed summaries.",
+            "Tool-calling architecture with a custom `summarize_text` tool for structured, consistent output formatting.",
+            "Deployed on Google Cloud Run with support for multi-turn interactions and streaming responses for better UX.",
+            "Public GitHub repo and live endpoint, showing real API design, LLM integration and cloud deployment."
+          ],
+          "outcome": "Highlights my ability to design modular LLM services with controllable behavior and real deployment pipelines.",
+          "tech": ["Google ADK", "Gemini", "Python", "Cloud Run", "API Design"],
           "githubUrl": "https://github.com/Viswanathan49/text-summarization-agent",
-          "liveDemoUrl": "https://text-summarizer-784066446437.us-central1.run.app",
-          "tech": ["LLM integration", "NLP"],
-          "description": "An NLP-powered agent utilizing LLMs to accurately summarize large text documents."
+          "liveDemoUrl": "https://text-summarizer-784066446437.us-central1.run.app"
+        },
+        {
+          "title": "CarbonPulse – Carbon Footprint Awareness PWA",
+          "tagline": "Zero-backend React PWA for real-time carbon footprint tracking and gamified reduction insights.",
+          "problem": "Individuals often don't know the impact of daily choices on their carbon footprint. CarbonPulse provides a privacy-first, interactive way to estimate and reduce emissions.",
+          "built": [
+            "React Progressive Web App that calculates real-time personal carbon footprint with scenario-based inputs.",
+            "Emission factors sourced from UK DEFRA 2023 and US EPA/NREL to estimate impact across transport, energy and lifestyle.",
+            "Effort-vs-Impact recommendation engine to highlight high-impact, realistic actions users can take.",
+            "Zero-backend architecture with strict CSP headers, DOMPurify XSS sanitization, zero PII storage and deployment on Google Cloud Run."
+          ],
+          "outcome": "Shows full-stack thinking across UX, environmental data, security and deployment, with a meaningful social impact angle.",
+          "tech": ["React", "PWA", "Google Cloud Run", "Security (CSP, DOMPurify)"],
+          "githubUrl": "https://github.com/Viswanathan49/carbon-awareness-platform",
+          "liveDemoUrl": "https://carbon-awareness-platform-172837462274.europe-west1.run.app/"
         }
       ]
     },
@@ -51,20 +71,49 @@
       "name": "Data Analytics & Power BI",
       "projects": [
         {
-          "title": "HR Analytics Dashboard v2",
-          "link": "https://github.com/Viswanathan49/HR-Analytics-Dashboard-v2-Power-BI-",
-          "githubUrl": "https://github.com/Viswanathan49/HR-Analytics-Dashboard-v2-Power-BI-",
-          "liveDemoUrl": "",
-          "tech": ["DAX", "Data Modeling", "Power BI"],
-          "description": "A comprehensive Power BI dashboard analyzing HR metrics and workforce dynamics."
+          "title": "SaaS Subscription Analytics – End-to-End Data Pipeline & Power BI",
+          "tagline": "End-to-end SaaS analytics pipeline from Kaggle CSVs to a PostgreSQL warehouse and a 4-page Power BI dashboard for subscription business KPIs.",
+          "problem": "Modern SaaS businesses need a reliable analytics stack to track MRR, churn and unit economics, but most \"portfolio\" projects stop at a single dashboard. In this project, I built an end-to-end pipeline that turns raw CSV exports into a production-style data warehouse and executive-ready analytics for a subscription product.",
+          "built": [
+            "Python ETL pipeline ingesting Kaggle SaaS metrics CSV data into PostgreSQL, transforming it into raw tables, 3+ dimension tables and 2+ fact tables plus analytics views.",
+            "Star-schema data model for customers, subscriptions and revenue, powering 10+ SaaS KPIs: Monthly Recurring Revenue (MRR), churn rate, CAC payback months, ARPU, customer tenure, active customers.",
+            "4-page Power BI experience: Executive Overview, Revenue & Plan Analytics, Churn & Retention, Customer Economics, built on a semantic model with relationships and hierarchies.",
+            "14+ DAX measures, a custom dark navy/cyan-purple theme, drill-through interactions and slicers by plan, time and segment to highlight growth, risk cohorts and high-value customers."
+          ],
+          "outcome": "This project shows I can design data models, build ETL, write analytical SQL, and design BI dashboards that decision-makers can actually use, not just academic plots.",
+          "tech": ["SQL (PostgreSQL)", "Python", "Power BI", "DAX", "Power Query", "Star Schema", "ETL"],
+          "githubUrl": "https://github.com/Viswanathan49/saas-analytics-sql-powerbi",
+          "liveDemoUrl": ""
         },
         {
-          "title": "India Crude Oil Intelligence Dashboard",
-          "link": "https://github.com/Viswanathan49/india-crude-oil-intelligence-dashboard",
+          "title": "India Crude Oil Intelligence Dashboard (Microsoft Elevate Capstone)",
+          "tagline": "4-page Power BI dashboard on India's crude oil import dependency (FY2014–FY2025) using real PPAC and NITI Aayog data.",
+          "problem": "India is heavily dependent on imported crude oil, and energy security requires understanding how dependency and supplier mix evolve over time. This capstone, built under the Microsoft Elevate × AICTE program, turns raw government data into an executive-friendly view of import dependency and refinery utilization.",
+          "built": [
+            "Interactive 4-page Power BI dashboard analyzing crude oil imports from FY2014–FY2025 with official PPAC data.",
+            "Star schema across 6 interconnected tables (~300 records) capturing countries, volumes, years, dependency metrics and refinery information.",
+            "10+ DAX measures: Import Dependency %, YoY Growth, Country Share %, trend indicators and contribution metrics.",
+            "Visuals for refinery utilization across 23 refineries (258 MMTPA capacity) and petroleum stock levels, plus country-wise supply diversification including Russia's rise as India's #2 supplier post-2022."
+          ],
+          "outcome": "Surfaced India's ~89.2% crude import dependency and visualized how Russia's share increased after 2022, demonstrating ability to turn public policy data into clear energy insights.",
+          "tech": ["Power BI", "DAX", "Power Query", "Excel", "Star Schema"],
           "githubUrl": "https://github.com/Viswanathan49/india-crude-oil-intelligence-dashboard",
-          "liveDemoUrl": "",
-          "tech": ["Data visualization", "Insights"],
-          "description": "Intelligence dashboard visualizing critical data trends in the India crude oil sector."
+          "liveDemoUrl": ""
+        },
+        {
+          "title": "HR Analytics Dashboard – Microsoft Elevate Internship",
+          "tagline": "Power BI dashboard analyzing salary, attendance and workforce distribution with actionable HR insights.",
+          "problem": "HR teams need clear visibility into attendance, compensation patterns and workforce diversity to drive interventions. This project converts raw HR data into an interactive dashboard that surfaces gaps and managerial issues.",
+          "built": [
+            "Power BI dashboard built during the Microsoft Elevate Power BI internship focusing on salary, attendance and workforce distribution analytics.",
+            "KPI cards, scatter plots (bonus vs salary), treemaps (job levels), donut charts (gender split) and tabular views for HR metrics.",
+            "DAX measures and Power Query transformations to clean HR data and compute attendance rate, bonus ratios and diversity indicators.",
+            "Identified a 13.16% attendance gap traceable to specific managers, demonstrating real, actionable insight rather than purely academic visuals."
+          ],
+          "outcome": "Shows my ability to turn messy HR data into business-ready dashboards that highlight where leaders need to take action.",
+          "tech": ["Power BI", "DAX", "Power Query", "Excel", "HR Analytics"],
+          "githubUrl": "https://github.com/Viswanathan49/HR-Analytics-Dashboard-v2-Power-BI-",
+          "liveDemoUrl": ""
         }
       ]
     },
@@ -73,12 +122,19 @@
       "name": "Machine Learning",
       "projects": [
         {
-          "title": "Customer Churn Prediction",
-          "link": "https://github.com/Viswanathan49/Customer-churn-prediction",
+          "title": "Customer Churn Prediction Web App (Pure Python ML)",
+          "tagline": "End-to-end churn prediction web app with a custom logistic-style engine, explainable outputs and retention recommendations.",
+          "problem": "Subscription businesses lose revenue when high-value customers churn; they need models that are explainable, not just black-box ML. This project demonstrates how I can build an interpretable risk model and deploy it as a usable web tool.",
+          "built": [
+            "End-to-end churn prediction web application with input validation, feature engineering, risk scoring and recommended actions.",
+            "Custom logistic-style prediction engine in pure Python (manual sigmoid, interpretable feature weights) with no external ML libraries.",
+            "Features derived from tenure, monthly charges, contract type, service usage and satisfaction score; outputs include risk probability, main risk factors and suggested retention actions.",
+            "Responsive UI built with Bolt AI and a clear separation of frontend and backend for maintainability and future extension."
+          ],
+          "outcome": "Demonstrates that I can implement ML fundamentals from scratch, prioritize interpretability and ship a working application, not just a notebook.",
+          "tech": ["Python", "Bolt AI", "HTML/CSS/JS", "Explainable ML"],
           "githubUrl": "https://github.com/Viswanathan49/Customer-churn-prediction",
-          "liveDemoUrl": "https://vishwa-customer-churn-prediction.netlify.app",
-          "tech": ["Pandas", "Python", "Predictive Modeling"],
-          "description": "Machine learning model predicting customer churn probability based on historical data."
+          "liveDemoUrl": "https://vishwa-customer-churn-prediction.netlify.app"
         }
       ]
     }
