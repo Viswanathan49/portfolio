@@ -1,9 +1,24 @@
 {
-  "professional": {
-    "title": "Virtual Intern, Microsoft Elevate × AICTE Emerging Technologies Program",
-    "timeline": "Feb 2026 – Mar 2026",
-    "description": "Completed a rigorous 4-week internship encompassing 5 industry-focused tracks: Power BI for Business Applications, Microsoft Azure, AI & Machine Learning, Microsoft Copilot, and Cloud Administration & Engineering."
-  },
+  "professional": [
+    {
+      "company": "Altimetrik",
+      "title": "Data Engineering Intern",
+      "timeline": "Jul 2026 – Present",
+      "description": "Working on Azure Data Factory, Snowflake, and dbt, building data pipelines and analytics solutions while strengthening engineering and SQL skills.",
+      "icon": "altimetrik"
+    },
+    {
+      "company": "Microsoft Elevate × AICTE",
+      "title": "Power BI Virtual Intern",
+      "timeline": "Feb 2026 – Mar 2026",
+      "description": "Completed a 4-week virtual internship encompassing 5 industry-focused tracks: Power BI for Business Applications, Microsoft Azure, AI & Machine Learning, Microsoft Copilot, and Cloud Administration & Engineering. Built hands-on skills in data visualization, cloud computing, and AI tools used across the industry today.",
+      "capstone": {
+        "text": "Capstone Project: India Crude Oil Intelligence Dashboard",
+        "url": "#projects"
+      },
+      "icon": "microsoft"
+    }
+  ],
   "community": [
     {
       "name": "Prompt Wars Virtual Hackathon",

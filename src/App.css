@@ -45,7 +45,7 @@
   border: 1px solid var(--border-color);
   color: var(--text-main);
   padding: 0.4rem 0.8rem;
-  border-radius: 4px;
+  border-radius: 0;
   cursor: pointer;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -130,7 +130,7 @@
   font-family: var(--font-mono);
   font-size: 1rem;
   padding: 0.8rem 1.5rem;
-  border-radius: 4px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -147,9 +147,9 @@
 }
 
 .btn-primary:hover {
-  background: rgba(0, 243, 255, 0.1);
-  box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
-  text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+  background: var(--neon-blue);
+  color: var(--bg-color);
+  box-shadow: var(--shadow-neon-blue);
   transform: translateY(-2px);
 }
 
@@ -162,8 +162,8 @@
 .btn-secondary:hover {
   background: var(--neon-purple);
   border-color: var(--neon-purple);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(188, 19, 254, 0.5);
+  color: var(--bg-color);
+  box-shadow: var(--shadow-neon-purple);
   transform: translateY(-2px);
 }
 
@@ -195,11 +195,11 @@
 /* Terminal Window */
 .terminal-window {
   background-color: var(--bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border: var(--border-neon-blue);
+  border-radius: 0;
   overflow: hidden;
   margin-top: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-neon-blue);
 }
 
 .terminal-header {
@@ -213,7 +213,7 @@
 .dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 0;
   margin-right: 8px;
 }
 
@@ -299,7 +299,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  border-radius: 50%;
+  border-radius: 0;
   background: rgba(255,255,255,0.05);
 }
 
