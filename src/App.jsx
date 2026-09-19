@@ -3,7 +3,7 @@ import './App.css';
 import Tabs from './components/ui/Tabs';
 import ExperienceSection from './components/ui/ExperienceSection';
 import ContactSection from './components/ui/ContactSection';
-import ParticleNetwork from './components/ui/ParticleNetwork';
+import PixelHero from './components/ui/PixelHero';
 import projectsData from './data/projects.json';
 
 const IconGitHub = () => (
@@ -48,27 +48,7 @@ function App() {
         </div>
       </header>
 
-      <div className="hero-wrapper">
-        <ParticleNetwork />
-        <section className="hero-section container">
-          <div className="hero-content">
-            <h1 className="glitch-text">Data Scientist &<br />AI Developer</h1>
-            <p className="hero-subtitle">Building intelligent agents, scalable cloud architectures, and data-driven insights.</p>
-            <div className="hero-cta">
-              <a href="#projects" className="btn btn-primary">View Projects</a>
-              <a href="#contact" className="btn btn-secondary">Let's Connect</a>
-              <a href="/Viswanathan_Resume.pdf" download className="btn btn-ghost">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px'}}>
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Resume
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+      <PixelHero />
 
       <main className="main-content container">
         <section id="projects" className="projects-section">

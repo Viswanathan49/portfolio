@@ -1,0 +1,207 @@
+.pixel-hero-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.pixel-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/pixel_art_hero.png');
+  background-size: cover;
+  background-position: center;
+  /* Use pixelated rendering so resizing keeps it sharp */
+  image-rendering: pixelated;
+  z-index: 1;
+}
+
+/* Rain Effect */
+.rain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rain-drop {
+  position: absolute;
+  bottom: 100%;
+  width: 2px;
+  height: 20px;
+  background: rgba(0, 243, 255, 0.4);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Flicker effect overlay to simulate CRT/Monitors flickering */
+.monitor-flicker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 243, 255, 0.05);
+  z-index: 3;
+  pointer-events: none;
+  animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
+
+/* Moving Scanlines */
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  animation: scanlines-scroll 10s linear infinite;
+}
+
+@keyframes scanlines-scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100vh; }
+}
+
+/* Severe Glitch Class */
+.severe-glitch {
+  animation: severeGlitch 0.2s steps(2, start) infinite;
+}
+
+@keyframes severeGlitch {
+  0% { transform: translate(0) skew(0); filter: hue-rotate(0deg); }
+  20% { transform: translate(-5px, 5px) skew(-20deg); filter: hue-rotate(90deg); }
+  40% { transform: translate(5px, -5px) skew(20deg); filter: hue-rotate(-90deg); }
+  60% { transform: translate(-10px, 0) skew(-10deg); filter: hue-rotate(180deg); }
+  80% { transform: translate(10px, 10px) skew(10deg); filter: hue-rotate(-180deg); }
+  100% { transform: translate(0) skew(0); filter: hue-rotate(0deg); }
+}
+
+/* Content over image */
+.pixel-hero-content {
+  position: relative;
+  z-index: 10; /* Above all overlays */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rpg-menu-box {
+  background: rgba(0, 0, 0, 0.85);
+  border: 4px solid var(--neon-blue);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+/* Corner decorations */
+.rpg-menu-box::before, .rpg-menu-box::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--neon-blue);
+}
+.rpg-menu-box::before {
+  top: -4px; left: -4px;
+}
+.rpg-menu-box::after {
+  bottom: -4px; right: -4px;
+}
+
+.glitch-text {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px var(--neon-purple), -2px -2px var(--neon-blue);
+  position: relative;
+  display: inline-block;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--neon-blue);
+  margin-bottom: 2rem;
+}
+
+.rpg-menu-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+.rpg-menu-btn {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.1s;
+}
+
+.cursor-arrow {
+  color: transparent;
+  margin-right: 0.8rem;
+}
+
+.rpg-menu-btn:hover {
+  color: var(--neon-purple);
+}
+
+.rpg-menu-btn:hover .cursor-arrow {
+  color: var(--neon-blue);
+}
+
+@media (max-width: 768px) {
+  .glitch-text {
+    font-size: 1.8rem;
+  }
+  .rpg-menu-options {
+    padding-left: 0;
+  }
+  .rpg-menu-btn {
+    font-size: 1rem;
+  }
+}
